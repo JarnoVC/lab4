@@ -1,11 +1,17 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
+
+//enable cors
+const cors = require('cors');
+app.use(cors());
+
+
 
 app.get('/api/v1/messages', (req, res) => {
   res.json({
     status: "success",
-    message: "GETTING messages",
+    message: "GET all messages",
     data: [],
   })
 })
